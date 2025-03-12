@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
-		<artifactId>yub-spring-boot-analysis</artifactId>
+		<artifactId>yub-springboot-analysis</artifactId>
 		<version>${revision}</version>
 		<relativePath>../..</relativePath>
 	</parent>

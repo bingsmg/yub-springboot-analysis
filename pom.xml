@@ -4,11 +4,11 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.springframework.boot</groupId>
-	<artifactId>yub-spring-boot-analysis</artifactId>
+	<artifactId>yub-springboot-analysis</artifactId>
 	<version>${revision}</version>
 	<packaging>pom</packaging>
-	<name>yub-spring-boot-analysis</name>
-	<description>yub-spring-boot-analysis</description>
+	<name>yub-springboot-analysis</name>
+	<description>yub-springboot-analysis</description>
 
 	<properties>
 		<revision>2.1.0.RELEASE</revision>
