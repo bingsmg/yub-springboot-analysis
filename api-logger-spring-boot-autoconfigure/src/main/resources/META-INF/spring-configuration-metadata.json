@@ -1,0 +1,132 @@
+{
+  "groups": [
+    {
+      "name": "api-logger",
+      "type": "com.example.apilogger.autoconfigure.ApiLoggerProperties",
+      "description": "API日志记录配置属性"
+    }
+  ],
+  "properties": [
+    {
+      "name": "api-logger.enabled",
+      "type": "java.lang.Boolean",
+      "description": "是否启用API日志记录",
+      "defaultValue": true
+    },
+    {
+      "name": "api-logger.level",
+      "type": "com.example.apilogger.autoconfigure.ApiLoggerProperties$LogLevel",
+      "description": "日志记录级别",
+      "defaultValue": "INFO"
+    },
+    {
+      "name": "api-logger.include-request-headers",
+      "type": "java.lang.Boolean",
+      "description": "是否记录请求头",
+      "defaultValue": true
+    },
+    {
+      "name": "api-logger.include-response-headers",
+      "type": "java.lang.Boolean",
+      "description": "是否记录响应头",
+      "defaultValue": true
+    },
+    {
+      "name": "api-logger.include-request-body",
+      "type": "java.lang.Boolean",
+      "description": "是否记录请求体",
+      "defaultValue": true
+    },
+    {
+      "name": "api-logger.include-response-body",
+      "type": "java.lang.Boolean",
+      "description": "是否记录响应体",
+      "defaultValue": true
+    },
+    {
+      "name": "api-logger.include-request-params",
+      "type": "java.lang.Boolean",
+      "description": "是否记录请求参数",
+      "defaultValue": true
+    },
+    {
+      "name": "api-logger.include-execution-time",
+      "type": "java.lang.Boolean",
+      "description": "是否记录执行时间",
+      "defaultValue": true
+    },
+    {
+      "name": "api-logger.max-request-body-size",
+      "type": "java.lang.Integer",
+      "description": "最大请求体大小（字节）",
+      "defaultValue": 10240
+    },
+    {
+      "name": "api-logger.max-response-body-size",
+      "type": "java.lang.Integer",
+      "description": "最大响应体大小（字节）",
+      "defaultValue": 10240
+    },
+    {
+      "name": "api-logger.exclude-patterns",
+      "type": "java.util.List<java.lang.String>",
+      "description": "需要忽略的URL路径模式"
+    },
+    {
+      "name": "api-logger.include-patterns",
+      "type": "java.util.List<java.lang.String>",
+      "description": "需要包含的URL路径模式"
+    },
+    {
+      "name": "api-logger.exclude-headers",
+      "type": "java.util.List<java.lang.String>",
+      "description": "需要忽略的请求头名称"
+    },
+    {
+      "name": "api-logger.format",
+      "type": "com.example.apilogger.autoconfigure.ApiLoggerProperties$LogFormat",
+      "description": "日志记录格式",
+      "defaultValue": "JSON"
+    }
+  ],
+  "hints": [
+    {
+      "name": "api-logger.level",
+      "values": [
+        {
+          "value": "TRACE",
+          "description": "TRACE级别"
+        },
+        {
+          "value": "DEBUG",
+          "description": "DEBUG级别"
+        },
+        {
+          "value": "INFO",
+          "description": "INFO级别"
+        },
+        {
+          "value": "WARN",
+          "description": "WARN级别"
+        },
+        {
+          "value": "ERROR",
+          "description": "ERROR级别"
+        }
+      ]
+    },
+    {
+      "name": "api-logger.format",
+      "values": [
+        {
+          "value": "JSON",
+          "description": "JSON格式"
+        },
+        {
+          "value": "PLAIN_TEXT",
+          "description": "纯文本格式"
+        }
+      ]
+    }
+  ]
+} 

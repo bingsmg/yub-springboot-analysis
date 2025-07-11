@@ -1,0 +1,54 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: api-logger-demo
+  
+  # H2数据库配置
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: 
+  
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    database-platform: org.hibernate.dialect.H2Dialect
+
+# API Logger 配置
+api-logger:
+  enabled: true
+  level: INFO
+  format: JSON
+  include-request-headers: true
+  include-response-headers: true
+  include-request-body: true
+  include-response-body: false  # 响应体通常很大，默认不记录
+  include-request-params: true
+  include-execution-time: true
+  max-request-body-size: 5120   # 5KB
+  max-response-body-size: 5120  # 5KB
+  exclude-patterns:
+    - "/actuator/**"
+    - "/h2-console/**"
+    - "/static/**"
+    - "/favicon.ico"
+  exclude-headers:
+    - "Authorization"
+    - "Cookie"
+    - "X-Auth-Token"
+
+# 日志配置
+logging:
+  level:
+    com.example.apilogger.autoconfigure.ApiLoggerInterceptor: INFO
+    com.example.demo: DEBUG
+    org.springframework.web: DEBUG 
